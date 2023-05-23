@@ -1,0 +1,35 @@
+:root {
+  --header-height: 64px;
+  --footer-height: 70px;
+  --content-extra-my: 32px;
+}
+
+.layout-header {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+}
+.layout-header .logout-btn {
+  margin-left: auto;
+}
+.layout-header .logout-btn button {
+  all: unset;
+}
+
+.layout-content {
+  margin-top: calc(var(--header-height) + var(--content-extra-my));
+  padding: 0 5rem;
+}
+.layout-content .layout-content-children-wrapper {
+  background: #fff;
+  padding: 2rem;
+  min-height: calc(
+    100vh - var(--header-height) - var(--footer-height) -
+      var(--content-extra-my)
+  );
+}
+
+.layout-footer {
+  text-align: center;
+  opacity: 0.5;
+}
